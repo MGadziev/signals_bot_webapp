@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Размещаем кнопки вертикально */
+    align-items: center; /* Выравниваем кнопки по центру по горизонтали */
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px 0; /* Уменьшил немного отступы между кнопками */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    width: 150px; /* Ширина кнопок */
+}
+
+.button:hover {
+    background-color: #45a049;
+}
