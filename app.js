@@ -18,7 +18,7 @@ button_1.addEventListener("click", function(){
     tg.sendData("sendTestMessage");
     tg.MainButton.setText("Сообщение отправлено!");
     tg.MainButton.show();
-    window.open('google.com')
+    window.open('google.com');
 });
 
 
