@@ -11,7 +11,7 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let button_1 = document.getElementById("button_1");
+let button_1 = document.getElementById("button_2");
 
 
 button_1.addEventListener("click", function(){
