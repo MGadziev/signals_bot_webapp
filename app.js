@@ -11,11 +11,10 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let btn1 = document.getElementById("button_1");
+let button_1 = document.getElementById("button_1");
 
-btn1.addEventListener("click", function(){
+button_1.addEventListener("click", function(){
     tg.MainButton.setText("Сообщение отправлено!");
     tg.MainButton.show();
     tg.sendData("sendTestMessage");
-    console.log('test')
 });
