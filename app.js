@@ -5,16 +5,17 @@
 // После проведения оплаты человеку в телеграм приходит оповещение, что теперь у него есть доступ
 
 let tg = window.Telegram.WebApp;
-let mainbut = tg.MainButton;
 
 tg.expand();
-
-mainbut.setText('Отправить данные');
-mainbut.show();
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-mainbut.addEventListener("click", function(){
+let button_1 = document.getElementById("button_1");
+
+
+button_1.addEventListener("click", function(){
     tg.sendData("sendTestMessage");
+    tg.MainButton.setText("Сообщение отправлено!");
+    tg.MainButton.show();
 });
