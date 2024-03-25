@@ -16,14 +16,19 @@
             <p>Срок: <b>30 дней</b></p>
 
             <p>Если у вас ранее была куплена подписка - новое время прибавиться к текущему!</p>
-            <form id="emailForm">
+           <form id="emailForm">
                 <label for="email">Email:</label>
-                <input type="email" id="email" required><br><br>
+                <input type="email" id="email" required class="input-field"><br><br>
 
                 <input type="checkbox" id="agree" required>
-                <label for="agree">Я согласен с условиями использования</label><br><br>
+                <label for="agree" class="checkbox-label">Я согласен с условиями использования</label><br><br>
 
-                <button type="button" onclick="redirectToPaySystem()">Оплатить подписку</button>
+                <div class="buttons">
+                    <button type="button" onclick="redirectToPaySystem()" class="button">Оплатить подписку</button>
+
+                    <!-- Кнопка "Назад" -->
+                    <button type="button" onclick="goBack()" class="button">Назад</button>
+                </div>
             </form>
         </div>
     </div>
@@ -32,14 +37,10 @@
     <script src="app.js"></script>
 
     <script>
-        // Вызываем функцию startPayment() после загрузки страницы
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const tariff = params.get('tariff');
-            if (tariff) {
-                startPayment(tariff);
-            }
-        };
+        // Функция для возвращения на предыдущую страницу
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>

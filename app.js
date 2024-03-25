@@ -11,10 +11,11 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let usercard = document.getElementById("usercard"); //получаем блок usercard
-let userid = document.createElement('p'); //создаем еще параграф
-userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
-usercard.appendChild(userid); //добавляем
+// Вытаскиваем user_id
+//let usercard = document.getElementById("usercard"); //получаем блок usercard
+//let userid = document.createElement('p'); //создаем еще параграф
+//userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
+//usercard.appendChild(userid); //добавляем
 
 function startPayment(tariff) {
     window.location.href = "page2.html";
@@ -31,3 +32,7 @@ function redirectToPaySystem() {
     }
 };
 
+// Функция для возвращения на предыдущую страницу
+function goBack() {
+    window.history.back();
+}

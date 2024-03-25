@@ -16,6 +16,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text {
@@ -30,15 +31,16 @@ body {
 }
 
 .button {
-    padding: 10px 20px;
-    margin: 5px 0; /* Уменьшил немного отступы между кнопками */
-    font-size: 16px;
+    padding: 12px 24px;
+    margin: 5px 0; /* Увеличил отступы между кнопками */
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Увеличил радиус скругления углов */
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
-    width: 150px; /* Ширина кнопок */
+    width: 250px; /* Увеличил ширину кнопок */
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
 }
 
 .button:hover {
@@ -46,13 +48,23 @@ body {
 }
 
 .input-field {
-    padding: 8px;
-    width: 250px;
-    border-radius: 5px;
+    padding: 14px; /* Увеличил отступы внутри инпута */
+    width: 300px; /* Ширина поля ввода */
+    border-radius: 25px; /* Радиус скругления углов */
     border: 1px solid #ccc;
     box-sizing: border-box;
+    margin-bottom: 10px; /* Отступ снизу */
+    background-color: #f9f9f9; /* Фоновый цвет */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: box-shadow 0.3s ease; /* Плавное изменение тени при фокусе */
+}
+
+.input-field:focus {
+    outline: none; /* Убираем контур при фокусе */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Увеличиваем тень при фокусе */
 }
 
 .checkbox-label {
-    font-size: 14px;
+    font-size: 16px; /* Увеличил размер шрифта */
+    margin-top: 5px; /* Уменьшил отступ сверху */
 }
