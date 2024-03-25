@@ -11,13 +11,23 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let button_1 = document.getElementById("button_2");
+let usercard = document.getElementById("usercard"); //получаем блок usercard
+let userid = document.createElement('p'); //создаем еще параграф
+userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
+usercard.appendChild(userid); //добавляем
 
+function startPayment(tariff) {
+    window.location.href = "page2.html";
+};
 
-button_1.addEventListener("click", function(){
-    tg.sendData("sendTestMessage");
-    tg.MainButton.setText("Сообщение отправлено!");
-    tg.MainButton.show();
-});
+function redirectToPaySystem() {
+    const email = document.getElementById('email').value;
+    const agree = document.getElementById('agree').checked;
 
+    if (email && agree) {
+        window.location.href = "https://www.google.com/";
+    } else {
+        alert("Пожалуйста, введите email и примите соглашение.");
+    }
+};
 

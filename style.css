@@ -44,3 +44,15 @@ body {
 .button:hover {
     background-color: #45a049;
 }
+
+.input-field {
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.checkbox-label {
+    font-size: 14px;
+}
