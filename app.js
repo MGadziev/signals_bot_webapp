@@ -12,10 +12,11 @@ tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
 // Вытаскиваем user_id
-//let usercard = document.getElementById("usercard"); //получаем блок usercard
-//let userid = document.createElement('p'); //создаем еще параграф
-//userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
-//usercard.appendChild(userid); //добавляем
+let usercard = document.getElementById("usercard"); //получаем блок usercard
+let userid = document.createElement('p'); //создаем еще параграф
+userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
+usercard.appendChild(userid); //добавляем
+
 
 function startPayment(tariff) {
     window.location.href = "page2.html";
