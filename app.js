@@ -1,7 +1,7 @@
 const tg = window.Telegram.WebApp;
 
 function startPayment() {
-    window.location.href = 'payment.html';
+    window.location.href = 'index.html';
 };
 
 // Используем async/await для асинхронных вызовов
