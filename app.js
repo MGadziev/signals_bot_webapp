@@ -6,7 +6,7 @@ tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
 function startPayment() {
-    window.location.href = 'payment.html';
+    window.location.href = "payment.html";
 };
 
 // Используем async/await для асинхронных вызовов
@@ -32,12 +32,13 @@ async function redirectToPaySystem() {
 //            body: JSON.stringify({ email: email, userID: userID })
 //        });
 //        const data = await response.json();
+        window.location.href = 'thankyou.html';
 
-        if /*(data.success)*/ true {
-            window.location.href = 'thankyou.html';
-        } else {
-            alert('Ошибка при обработке вашего запроса');
-        }
+//        if /*(data.success)*/ data {
+//            window.location.href = 'thankyou.html';
+//        } else {
+//            alert('Ошибка при обработке вашего запроса');
+//        }
     } catch (error) {
         alert('Ошибка при отправке данных');
     }
