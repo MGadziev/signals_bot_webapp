@@ -1,7 +1,12 @@
-const tg = window.Telegram.WebApp;
+let tg = window.Telegram.WebApp;
+
+tg.expand();
+
+tg.MainButton.textColor = '#FFFFFF';
+tg.MainButton.color = '#2cab37';
 
 function startPayment() {
-    window.location.href = 'index.html';
+    window.location.href = 'payment.html';
 };
 
 // Используем async/await для асинхронных вызовов
@@ -21,14 +26,14 @@ async function redirectToPaySystem() {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/submit-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: email, userID: userID })
-        });
-        const data = await response.json();
+//        const response = await fetch('http://localhost:3000/submit-email', {
+//            method: 'POST',
+//            headers: { 'Content-Type': 'application/json' },
+//            body: JSON.stringify({ email: email, userID: userID })
+//        });
+//        const data = await response.json();
 
-        if (data.success) { 
+        if /*(data.success)*/ true {
             window.location.href = 'thankyou.html';
         } else {
             alert('Ошибка при обработке вашего запроса');
